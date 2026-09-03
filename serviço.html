@@ -24,7 +24,148 @@
 Na Unhas Feitas, cada atendimento é pensado para que você saia se sentindo ainda mais bonita e confiante. <br>
 
 Unhas Feitas — cuidado, beleza e estilo em cada detalhe. 💅✨ 
+<section id="orcamento-servico">
+  <h2>Solicite um Orçamento Sem Compromisso</h2>
+  <p>Preencha os dados abaixo e nossa equipe de especialistas entrará em contato em até 24 horas.</p>
+
+  <form action="/enviar-orcamento" method="POST">
+    
+    <!-- Campo: Nome do Contato -->
+    <div class="form-group">
+      <label for="cliente-nome">Seu Nome:</label>
+      <input type="text" id="cliente-nome" name="nome" required placeholder="Ex: Maria Souza">
+    </div>
+
+    <!-- Campo: Empresa (Opcional, bom para B2B) -->
+    <div class="form-group">
+      <label for="cliente-empresa">Nome da Empresa (opicional):</label>
+      <input type="text" id="cliente-empresa" name="empresa" placeholder="Ex: Minha Empresa LTDA">
+    </div>
+
+    <!-- Campo: E-mail -->
+    <div class="form-group">
+      <label for="cliente-email">E-mail Corporativo:</label>
+      <input type="email" id="cliente-email" name="email" required placeholder="Ex: maria@empresa.com">
+    </div>
+
+    <!-- Campo: Serviço Desejado (Já pode vir pré-selecionado se desejar) -->
+    <div class="form-group">
+      <label for="servico-tipo">Qual serviço você precisa?</label>
+      <select id="servico-tipo" name="servico_interesse" required>
+        <option value="">Selecione o serviço...</option>
+        <option value="consultoria">Consultoria Empresarial</option>
+        <option value="desenvolvimento">Desenvolvimento de Software</option>
+        <option value="marketing">Marketing Digital</option>
+        <option value="suporte">Outsourcing de TI</option>
+      </select>
+    </div>
+
+    <!-- Campo: Urgência do Projeto -->
+    <div class="form-group">
+      <label for="prazo-projeto">Qual o prazo estimado para início?</label>
+      <select id="prazo-projeto" name="prazo" required>
+        <option value="imediato">Imediato (Menos de 1 mês)</option>
+        <option value="breve">Em breve (1 a 3 meses)</option>
+        <option value="planejamento">Apenas planejando / Cotando</option>
+      </select>
+    </div>
+
+    <!-- Campo: Detalhes adicionais -->
+    <div class="form-group">
+      <label for="detalhes-projeto">Fale brevemente sobre suas necessidades:</label>
+      <textarea id="detalhes-projeto" name="detalhes" rows="4" placeholder="Descreva os objetivos do seu projeto ou dúvidas..."></textarea>
+    </div>
+
+    <!-- Botão de Ação de Alto Impacto -->
+    <div class="form-group">
+      <button type="submit" class="btn-enviar">Solicitar Proposta Comercial</button>
+    </div>
+
+  </form>
+</section>
+
 </p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><section id="ouvidoria-empresa">
+  <h2>Canal de Ouvidoria e Ética</h2>
+  <p>Este é um espaço seguro e confidencial para relatar sugestões, reclamações, elogios ou denúncias.</p>
+
+  <form action="/enviar-ouvidoria" method="POST">
+    
+    <!-- Tipo de Manifestação -->
+    <div class="form-group">
+      <label for="tipo-manifestacao">Tipo de Manifestação:</label>
+      <select id="tipo-manifestacao" name="tipo_manifestacao" required>
+        <option value="">Selecione o tipo...</option>
+        <option value="sugestao">Sugestão</option>
+        <option value="elogio">Elogio</option>
+        <option value="reclamacao">Reclamação</option>
+        <option value="denuncia">Denúncia de Violação de Ética</option>
+      </select>
+    </div>
+
+    <!-- Opção de Anonimato (Crucial para Ouvidorias) -->
+    <div class="form-group">
+      <label for="identificacao">Como deseja enviar o relato?</label>
+      <select id="identificacao" name="identificacao" required onchange="toggleIdentificacao(this.value)">
+        <option value="identificado">Desejo me identificar</option>
+        <option value="anonimo">Desejo fazer um relato Anônimo</option>
+      </select>
+    </div>
+
+    <!-- Campos de Identificação (Podem ser ocultados via JavaScript) -->
+    <fieldset id="campos-identidade">
+      <legend>Dados de Contato (Opcional se anônimo)</legend>
+      
+      <div class="form-group">
+        <label for="ouvidoria-nome">Seu Nome:</label>
+        <input type="text" id="ouvidoria-nome" name="nome" placeholder="Seu nome completo">
+      </div>
+
+      <div class="form-group">
+        <label for="ouvidoria-email">Seu E-mail:</label>
+        <input type="email" id="ouvidoria-email" name="email" placeholder="seu@email.com">
+      </div>
+    </fieldset>
+
+    <!-- Detalhes do Ocorrido -->
+    <div class="form-group">
+      <label for="ouvidoria-assunto">Assunto Principal:</label>
+      <input type="text" id="ouvidoria-assunto" name="assunto" required placeholder="Resumo do motivo do contato">
+    </div>
+
+    <div class="form-group">
+      <label for="ouvidoria-mensagem">Descrição Detalhada:</label>
+      <textarea id="ouvidoria-mensagem" name="mensagem" rows="6" required placeholder="Descreva os fatos, datas, locais e envolvidos com o máximo de detalhes possível..."></textarea>
+    </div>
+
+    <!-- Envio de Evidências/Anexos -->
+    <div class="form-group">
+      <label for="ouvidoria-anexo">Possui alguma evidência ou documento? (Opcional):</label>
+      <input type="file" id="ouvidoria-anexo" name="anexo" accept=".pdf,.jpg,.jpeg,.png,.docx">
+      <small style="display: block; color: #666; margin-top: 4px;">Formatos aceitos: PDF, Imagens ou Word.</small>
+    </div>
+
+    <!-- Termo de Consentimento / Proteção de Dados (LGPD) -->
+    <div class="form-group checkbox-group">
+      <input type="checkbox" id="termo-lgpd" name="termo_lgpd" required>
+      <label for="termo-lgpd">Declaro que as informações enviadas são verdadeiras e aceito os termos de processamento de dados da empresa.</label>
+    </div>
+
+    <!-- Botão de Envio Protegido -->
+    <div class="form-group">
+      <button type="submit" class="btn-ouvidoria">Enviar Relato para Análise</button>
+    </div>
+
+  </form>
+</section>
+
 </body>
 </html>
 <a href="index.html"> voltar para o inicio </a>
