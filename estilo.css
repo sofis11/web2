@@ -3,4 +3,13 @@ header {
     color: white;
     padding: 25px;
     text-align: center; 
+    grid-area: heaeder;
+}   
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "nav main"
+        "footer footer";
+        grid-template-columns: 220px 1fr;
 }   
