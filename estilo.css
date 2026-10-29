@@ -1,15 +1,34 @@
 header {
     background-color: #c75e86;
-    color: white;
+    color: rgb(255, 194, 235);
     padding: 25px;
     text-align: center; 
-    grid-area: heaeder;
+    grid-area: header;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px ; 
+    border-top-right-radius: 12px;
 }   
 body {
     display: grid;
+    grid-template-columns: 220px 1fr;
     grid-template-areas: 
         "header header"
         "nav main"
+        "aside aside"
         "footer footer";
-        grid-template-columns: 220px 1fr;
+       background-color: #ffd9e8;
 }   
+main {
+    grid-area: main;
+    background-color: rgb(255, 240, 249);
+    padding: 20px;
+}
+aside {
+grid-area: aside;
+background-color: #ffd9e8;
+border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    border-top-left-radius: 12px ; 
+    border-top-right-radius: 12px;
+}
