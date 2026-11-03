@@ -14,21 +14,36 @@ body {
     grid-template-columns: 220px 1fr;
     grid-template-areas: 
         "header header"
-        "nav main"
-        "aside aside"
+        "aside main"
+        "nav nav"
         "footer footer";
        background-color: #ffd9e8;
 }   
 main {
     grid-area: main;
-    background-color: rgb(255, 240, 249);
+    background-color: #c75e86(212, 24, 149);
     padding: 20px;
+}
+nav {
+    grid-area: nav;
+    background-color: #ffd9e8;
+    color:white;
+    padding: 10px;
 }
 aside {
 grid-area: aside;
-background-color: #ffd9e8;
+color: white;
+background-color: #f8bad3;
 border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     border-top-left-radius: 12px ; 
     border-top-right-radius: 12px;
+}   
+footer {
+    grid-area: footer;
+    background-color: #eea1c5;;
+    color:white;
+    padding: 10px;
+    text-align: center;
+   
 }
