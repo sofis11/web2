@@ -56,3 +56,33 @@ footer {
     border-top-left-radius: 12px ; 
     border-top-right-radius: 12px;
 }
+.anuncio{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    top: 100px;
+    width: 200px;
+    padding: 20px;
+    background-color: #ffdee4;
+    border: 1px solid #e778a3;
+    z-index: 1000;
+}
+.anuncio1 {
+    top: 100px;
+    z-index: 1;
+}
+
+.anuncio2 {
+    top: 130px;
+    z-index: 2;
+}
+
+.anuncio3 {
+    top: 160px;
+    z-index: 3;
+}
+.fechar {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
